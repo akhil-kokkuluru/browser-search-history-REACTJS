@@ -26,6 +26,9 @@
     height: 17px;
     margin-top: none;
   }
+  .timeCont {
+    width: 60px;
+  }
 }
 
 li,
@@ -81,11 +84,12 @@ p {
   }
   .logoCss {
     margin-top: 0px;
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .allComponents {
     align-items: center;
     padding-bottom: 3px;
+    width: 600px;
   }
   .titlecss {
     margin-left: 7px;

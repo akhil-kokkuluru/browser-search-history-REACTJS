@@ -1,11 +1,17 @@
 import './index.css'
 
 const SearchItem = props => {
-  const {initialHistoryList} = props
-  const {timeAccessed, logoUrl, title, domainUrl} = initialHistoryList
+  const {initialHistoryList, onDeleteClick} = props
+  const {timeAccessed, logoUrl, title, domainUrl, id} = initialHistoryList
+  const Onclicking = () => {
+    onDeleteClick(id)
+  }
   return (
     <li className="listItems">
-      <p className="timecss">{timeAccessed}</p>
+      <div className="timeCont">
+        <p className="timecss">{timeAccessed}</p>
+      </div>
+
       <div className="allComponents">
         <div className="logoWebsiteurlContainer">
           <img src={logoUrl} alt="domain logo" className="logoCss" />
@@ -14,7 +20,7 @@ const SearchItem = props => {
             <p className="urlcss">{domainUrl}</p>
           </div>
         </div>
-        <button className="buttons" type="button">
+        <button className="buttons" type="button" onClick={Onclicking}>
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             className="deletecss"
