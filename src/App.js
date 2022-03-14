@@ -77,6 +77,8 @@ const initialHistoryList = [
 ]
 
 // Replace your code here
-const App = () => <InterfaceAndContent />
+const App = () => (
+  <InterfaceAndContent initialHistoryList={initialHistoryList} />
+)
 
 export default App

@@ -68,7 +68,21 @@ body {
   font-size: bold;
 }
 
+.historyItemsContainer {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  border-radius: 10px;
+  list-style-type: none;
+  margin-top: 30px;
+  width: 250px;
+  padding: 15px;
+}
+
 @media screen and (min-width: 768px) {
+  .historyItemsContainer {
+    width: 630px;
+  }
+
   .topContainerBlue {
     width: 660px;
     padding-left: 30px;
@@ -83,4 +97,10 @@ body {
   .inputEl {
     width: 230px;
   }
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }

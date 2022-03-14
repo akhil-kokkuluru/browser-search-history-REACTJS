@@ -1,8 +1,11 @@
 import './index.css'
 import {Component} from 'react'
+import SearchItem from '../searchItem'
 
 class InterfaceAndContent extends Component {
   render() {
+    const {initialHistoryList} = this.props
+    console.log(initialHistoryList)
     return (
       <div className="totalBG">
         <div className="ContentContainer">
@@ -25,6 +28,9 @@ class InterfaceAndContent extends Component {
               />
             </div>
           </div>
+          <ul className="historyItemsContainer">
+            <SearchItem initialHistoryList={initialHistoryList[0]} />
+          </ul>
         </div>
       </div>
     )
