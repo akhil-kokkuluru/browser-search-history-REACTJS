@@ -3,8 +3,19 @@ import {Component} from 'react'
 import SearchItem from '../searchItem'
 
 class InterfaceAndContent extends Component {
+  state = {inputValue: ''}
+
+  onTyping = event => {
+    this.setState({inputValue: event.target.value})
+  }
+
   render() {
+    const {inputValue} = this.state
     const {initialHistoryList} = this.props
+    const searchingList = initialHistoryList.filter(items =>
+      items.title.toLowerCase().includes(inputValue.toLowerCase()),
+    )
+
     console.log(initialHistoryList)
     return (
       <div className="totalBG">
@@ -25,11 +36,14 @@ class InterfaceAndContent extends Component {
                 className="inputEl"
                 type="search"
                 placeholder="Search History"
+                onChange={this.onTyping}
               />
             </div>
           </div>
           <ul className="historyItemsContainer">
-            <SearchItem initialHistoryList={initialHistoryList[0]} />
+            {searchingList.map(itemsList => (
+              <SearchItem initialHistoryList={itemsList} />
+            ))}
           </ul>
         </div>
       </div>

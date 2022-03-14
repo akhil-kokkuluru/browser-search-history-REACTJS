@@ -14,11 +14,13 @@ const SearchItem = props => {
             <p className="urlcss">{domainUrl}</p>
           </div>
         </div>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
-          className="deletecss"
-          alt="delete"
-        />
+        <button className="buttons" type="button">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
+            className="deletecss"
+            alt="delete"
+          />
+        </button>
       </div>
     </li>
   )
