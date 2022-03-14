@@ -20,7 +20,12 @@ const SearchItem = props => {
             <p className="urlcss">{domainUrl}</p>
           </div>
         </div>
-        <button className="buttons" type="button" onClick={Onclicking}>
+        <button
+          className="buttons"
+          type="button"
+          onClick={Onclicking}
+          testid="delete"
+        >
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             className="deletecss"

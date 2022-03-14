@@ -78,6 +78,15 @@ body {
   padding: 15px;
 }
 
+.historyItemsContainer2 {
+  background-color: #ffffff;
+  border-radius: 10px;
+  list-style-type: none;
+  margin-top: 30px;
+  width: 250px;
+  padding: 15px;
+}
+
 @media screen and (min-width: 768px) {
   .historyItemsContainer {
     width: 650px;
@@ -103,4 +112,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
+}
+.nohistory {
+  margin-top: 160px;
 }

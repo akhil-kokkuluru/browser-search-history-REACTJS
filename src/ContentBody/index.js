@@ -92,14 +92,17 @@ class InterfaceAndContent extends Component {
 
   render() {
     const {HistoryList, inputValue} = this.state
-    let nothingVal
+
+    let element1
+    let classComponener
     const newHistory = HistoryList.filter(items =>
       items.title.toLowerCase().includes(inputValue.toLowerCase()),
     )
     if (newHistory.length === 0 || HistoryList.length === 0) {
-      nothingVal = 'There is no history to show'
+      element1 = <p className="nohistory">There is no history to show</p>
+      classComponener = 'historyItemsContainer2'
     } else {
-      nothingVal = ''
+      classComponener = 'historyItemsContainer'
     }
 
     return (
@@ -125,13 +128,13 @@ class InterfaceAndContent extends Component {
               />
             </div>
           </div>
-          <ul className="historyItemsContainer">
-            <p className="nothingV">{nothingVal}</p>
+          <ul className={classComponener}>
+            {element1}
             {newHistory.map(itemsList => (
               <SearchItem
                 initialHistoryList={itemsList}
                 onDeleteClick={this.onDeleteClick}
-                id={itemsList.id}
+                key={itemsList.id}
               />
             ))}
           </ul>
